@@ -1,0 +1,13 @@
+(define (square a) (* a a))
+(define (sum-of-squares-of-max-2 x y z)
+  (- (+ (square x) (square y) (square z))
+     (or
+      (and (> x y) (> x z) (square x))
+      (and (> y z) (> y x) (square y))
+      (and (> z x) (> z y) (square z)))))
+(display (sum-of-squares-of-max-2 1 2 3))
+(newline)
+(display (sum-of-squares-of-max-2 3 2 1))
+(newline)
+(display (sum-of-squares-of-max-2 3 2 1))
+(newline)

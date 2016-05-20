@@ -9,4 +9,3 @@
 (define (inc i) (+ i 1))
 (display (sum identity 1 inc 10))
 (newline)
-  

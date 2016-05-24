@@ -1,0 +1,12 @@
+(define (same-parity first-element . w)
+  (define (same-parity-iter a li filtered)
+    (cond
+     ((null? li) filtered)
+     ((even? (+ a (car li)))
+      (same-parity-iter a (cdr li) (append filtered (list (car li)))))
+     (else (same-parity-iter a (cdr li) filtered))))
+  (same-parity-iter first-element w (list first-element)))
+(display (same-parity 1 2 3 4 5 6 7))
+(newline)
+(display (same-parity 2 3 4 5 6 7))
+(newline)

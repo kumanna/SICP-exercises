@@ -1,0 +1,12 @@
+(define (square-list1 items)
+  (if (null? items)
+      '()
+      (cons (let ((x (car items)))
+	      (* x x)) (square-list1 (cdr items)))))
+
+(define (square-list2 items)
+  (map (lambda (x) (* x x)) items))
+(display (square-list1 (list 1 2 3 4 5)))
+(newline)
+(display (square-list2 (list 1 2 3 4 5)))
+(newline)

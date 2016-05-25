@@ -1,0 +1,12 @@
+(define (equal? l1 l2)
+  (cond ((and (null? l1) (null? l2)) #t)
+	((or (null? l1) (null? l2)) #f)
+	((eq? (car l1) (car l2)) (equal? (cdr l1) (cdr l2)))
+	(else #f)))
+
+(display (equal? (list 1 2 3) (list 1 2 3)))
+(newline)
+(display (equal? (list 1 2 3) (list 1 2 4)))
+(newline)
+(display (equal? (list 1 2 3) (list 1 2)))
+(newline)

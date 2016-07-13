@@ -117,5 +117,3 @@
 (print-deque dq)
 (delete-end! dq)
 (print-deque dq)
-
-
